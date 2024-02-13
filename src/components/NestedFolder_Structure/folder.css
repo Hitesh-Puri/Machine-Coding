@@ -1,0 +1,73 @@
+.folder {
+    margin-top: 6px;
+    background-color: rgb(233, 233, 233);
+    display: flex;
+    justify-content: space-between;
+    padding: 3px;
+    width: 300px;
+    cursor: pointer;
+}
+
+.folder > span {
+    margin: 0 5px 2px 0;
+}
+
+.file {
+    margin-top: 5px;
+    padding-left: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.folder > div > button {
+    font-size: 1rem;
+    background-color: #fff;
+}
+
+.inputContainer {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.inputContainer > span {
+    margin-top: 5px;
+}
+
+.inputContainer__input {
+    margin: 6px 0 0 0;
+    padding: 5px;
+    display: flex;
+    border: 1px solid lightgrey;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.context-menu-trigger {
+    width: 200px;
+    height: 100px;
+    background-color: lightgray;
+    border: 1px solid gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .context-menu {
+    position: fixed;
+    z-index: 1000;
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 4px 0;
+  }
+  
+  .context-menu-option {
+    padding: 8px 16px;
+    cursor: pointer;
+  }
+  
+  .context-menu-option:hover {
+    background-color: #f0f0f0;
+  }
