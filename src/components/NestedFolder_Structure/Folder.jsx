@@ -60,7 +60,7 @@ export const Folder = ({
   return (
     <>
       {explorer.isFolder ? (
-        <div style={{ margin: "1rem", width: "100%" }}>
+        <div style={{ margin: "1rem" }}>
           <div
             onContextMenu={handleContextMenu}
             className="folder"

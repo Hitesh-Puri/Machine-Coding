@@ -3,10 +3,13 @@ import "./App.css";
 import explorer from "./data/folderData";
 import { Folder } from "./components/NestedFolder_Structure/Folder";
 import useTraverseTree from "./hooks/useTraverseTree";
+import Pagination from "./components/Pagination/Pagination";
 
 function App() {
+  /**
+   * Start of Folder Structure Code
+   */
   const [explorerData, setExplorerData] = useState(explorer);
-
   const { insertNode, deleteNode, renameNode } = useTraverseTree();
 
   const handleInsertNode = (folderId, item, isFolder) => {
@@ -23,15 +26,22 @@ function App() {
     const finalTree = renameNode(explorerData, folderId, item);
     setExplorerData(finalTree);
   };
+  /**
+   * End of Folder Structure code
+   */
 
   return (
     <div className="App">
+      <h1>Folder Structure Example</h1>
       <Folder
         handleInsertNode={handleInsertNode}
         handleDeleteNode={handleDeleteNode}
         handleRenameNode={handleRenameNode}
         explorer={explorerData}
       />
+      <br />
+      <h1>Pagination</h1>
+      <Pagination />
     </div>
   );
 }
